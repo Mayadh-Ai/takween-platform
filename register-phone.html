@@ -10,13 +10,46 @@
     <div class="welcome-container">
         <div class="welcome-content">
             <h2>التسجيل برقم الجوال</h2>
-            <p>أدخلي رقم جوالك ليصلك رمز التحقق</p>
-            <form style="margin-top: 20px;">
-                <input type="tel" placeholder="05xxxxxxxx" style="width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 8px; box-sizing: border-box;">
-                <button type="button" class="btn primary-btn" style="width: 100%; background-color: #4f46e5; color: white; border: none; padding: 12px; border-radius: 8px; cursor: pointer;">إرسال رمز التحقق</button>
+            <p id="instruction-text">أدخلي رقم جوالك ليصلك رمز التحقق</p>
+            
+            <!-- مرحلة إدخال رقم الجوال -->
+            <form id="phone-form" style="margin-top: 20px;">
+                <input type="tel" id="phone-number" placeholder="05xxxxxxxx" style="width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 8px; box-sizing: border-box;" required>
+                <button type="button" onclick="sendOTP()" class="btn primary-btn" style="width: 100%; background-color: #4f46e5; color: white; border: none; padding: 12px; border-radius: 8px; cursor: pointer;">إرسال رمز التحقق</button>
             </form>
+
+            <!-- مرحلة إدخال رمز التحقق OTP (مخفية بشكل افتراضي) -->
+            <form id="otp-form" style="margin-top: 20px; display: none;">
+                <input type="text" id="otp-code" placeholder="أدخلي الرمز (مثال: 1234)" style="width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 8px; box-sizing: border-box; text-align: center; letter-spacing: 4px;" required>
+                <button type="button" onclick="verifyOTP()" class="btn primary-btn" style="width: 100%; background-color: #10b981; color: white; border: none; padding: 12px; border-radius: 8px; cursor: pointer;">تأكيد الرمز والدخول</button>
+            </form>
+
             <p style="margin-top: 15px;"><a href="login.html">العودة لتسجيل الدخول</a></p>
         </div>
     </div>
+
+    <script>
+        function sendOTP() {
+            const phone = document.getElementById('phone-number').value;
+            if (phone.trim() === '') {
+                alert('يرجى إدخال رقم الجوال أولاً');
+                return;
+            }
+            // إخفاء نموذج رقم الجوال وإظهار نموذج الرمز
+            document.getElementById('phone-form').style.display = 'none';
+            document.getElementById('otp-form').style.display = 'block';
+            document.getElementById('instruction-text').innerText = 'تم إرسال رمز التحقق إلى الرقم ' + phone;
+        }
+
+        function verifyOTP() {
+            const otp = document.getElementById('otp-code').value;
+            if (otp.trim() === '') {
+                alert('يرجى إدخال رمز التحقق');
+                return;
+            }
+            // التوجيه إلى لوحة التحكم بعد التحقق
+            window.location.href = 'index.html';
+        }
+    </script>
 </body>
 </html>
