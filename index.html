@@ -1,0 +1,67 @@
+<div class="quick-links" style="margin-bottom: 20px; display: flex; gap: 10px;">
+    <a href="booking.html" class="action-btn" style="text-decoration: none; display: inline-block;">حجز موعد جديد</a>
+    <a href="checkout.html" class="action-btn" style="text-decoration: none; display: inline-block; background: #10b981;">صفحة الدفع</a>
+    <a href="welcome.html" class="action-btn" style="text-decoration: none; display: inline-block; background: #64748b;">تسجيل الخروج</a>
+</div>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة التحكم - Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- الشريط العلوي للوحة التحكم -->
+    <header class="dashboard-header">
+        <h1>لوحة التحكم الرئيسية</h1>
+        <p>مرحباً بكِ، فضلاً تابعي مهامك ومشاريعك اليومية</p>
+    </header>
+
+    <!-- الحاوية الرئيسية للأعمدة -->
+    <div class="dashboard-container">
+        
+        <!-- قسم متابعة المشاريع (65%) -->
+        <section class="projects-section">
+            <h2>المشاريع</h2>
+            <div class="stats-row">
+                <div class="stat-card">
+                    <h3>المشاريع النشطة</h3>
+                    <p class="stat-number">4</p>
+                </div>
+                <div class="stat-card">
+                    <h3>نسبة الإنجاز العامة</h3>
+                    <p class="stat-number">68%</p>
+                </div>
+            </div>
+
+            <div class="progress-container">
+                <span>نسبة الإنجاز 68%</span>
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+            </div>
+
+            <div class="stages">
+                <span class="stage active">1. الاستكشاف</span>
+                <span class="stage active">2. التصميم</span>
+                <span class="stage">3. التنفيذ والتسليم</span>
+            </div>
+        </section>
+
+        <!-- قسم الدعم والتواصل المباشر (35%) -->
+        <section class="support-section">
+            <h2>الدعم والتواصل المباشر</h2>
+            <p>تم رفع المقترحات الأخيرة وبانتظار ردكم الكريم.</p>
+            
+            <div class="support-form">
+                <textarea placeholder="اكتبِ رسالتك أو ملاحظاتك هنا..." rows="4"></textarea>
+                <button class="action-btn">إرسال تذكرة</button>
+            </div>
+        </section>
+
+    </div>
+
+</body>
+</html>

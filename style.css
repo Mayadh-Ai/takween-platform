@@ -1,0 +1,534 @@
+body {
+    font-family: Tahoma, sans-serif;
+    background-color: #f8fafc;
+    margin: 0;
+    padding: 30px;
+    direction: rtl;
+    color: #1e293b;
+}
+
+/* تصميم الشريط العلوي */
+.dashboard-header {
+    max-width: 1440px;
+    margin: 0 auto 25px auto;
+    background: #ffffff;
+    padding: 20px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+}
+
+.dashboard-header h1 {
+    margin: 0 0 8px 0;
+    font-size: 24px;
+    color: #0f172a;
+}
+
+.dashboard-header p {
+    margin: 0;
+    color: #64748b;
+    font-size: 14px;
+}
+
+/* حاوية الأعمدة المتجاورة */
+.dashboard-container {
+    display: flex;
+    gap: 24px;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+/* قسم المشاريع (65%) */
+.projects-section {
+    flex: 0 0 65%;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+}
+
+.projects-section h2, .support-section h2 {
+    margin-top: 0;
+    font-size: 20px;
+    color: #1e293b;
+    border-bottom: 2px solid #f1f5f9;
+    padding-bottom: 12px;
+}
+
+/* بطاقات الإحصائيات المصغرة */
+.stats-row {
+    display: flex;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.stat-card {
+    flex: 1;
+    background: #f8fafc;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+}
+
+.stat-card h3 {
+    margin: 0 0 5px 0;
+    font-size: 13px;
+    color: #64748b;
+}
+
+.stat-number {
+    margin: 0;
+    font-size: 22px;
+    font-weight: bold;
+    color: #7c3aed;
+}
+
+/* شريط التقدم */
+.progress-container {
+    margin: 25px 0;
+}
+
+.progress-container span {
+    font-size: 14px;
+    font-weight: bold;
+    color: #475569;
+}
+
+.progress-bar {
+    background: #e2e8f0;
+    border-radius: 8px;
+    height: 12px;
+    margin-top: 8px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    width: 68%;
+    background: #10b981;
+    height: 100%;
+    border-radius: 8px;
+}
+
+/* مراحل المشروع */
+.stages {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.stage {
+    flex: 1;
+    padding: 10px;
+    background: #f1f5f9;
+    text-align: center;
+    border-radius: 6px;
+    font-size: 13px;
+    color: #64748b;
+}
+
+.stage.active {
+    background: #e0e7ff;
+    color: #4338ca;
+    font-weight: bold;
+}
+
+/* قسم الدعم والتواصل (35%) */
+.support-section {
+    flex: 0 0 35%;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+}
+
+.support-section p {
+    color: #475569;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.support-form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.support-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-family: Tahoma, sans-serif;
+    resize: vertical;
+    box-sizing: border-box;
+}
+
+.support-form textarea:focus {
+    outline: none;
+    border-color: #7c3aed;
+}
+
+/* الأزرار التفاعلية */
+.action-btn {
+    background: #7c3aed;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+.action-btn:hover {
+    background: #6d28d9;
+}
+/* تنسيقات صفحة البداية والترحيب */
+.welcome-body {
+    background: linear-gradient(135deg, #7c3aed 0%, #4338ca 100%);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    font-family: Tahoma, sans-serif;
+    direction: rtl;
+}
+
+.welcome-container {
+    background: #ffffff;
+    max-width: 600px;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+.badge {
+    background: #e0e7ff;
+    color: #4338ca;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.welcome-content h1 {
+    color: #0f172a;
+    font-size: 28px;
+    margin: 20px 0 15px 0;
+}
+
+.welcome-content p {
+    color: #64748b;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.welcome-actions {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.primary-btn {
+    background: #7c3aed;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    transition: background 0.2s;
+}
+
+.primary-btn:hover {
+    background: #6d28d9;
+}
+
+.secondary-btn {
+    background: #f1f5f9;
+    color: #475569;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    transition: background 0.2s;
+}
+
+.secondary-btn:hover {
+    background: #e2e8f0;
+}
+/* تنسيقات صفحة تسجيل الدخول */
+.login-body {
+    background: #f8fafc;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    font-family: Tahoma, sans-serif;
+    direction: rtl;
+}
+
+.login-container {
+    background: #ffffff;
+    width: 100%;
+    max-width: 420px;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    box-sizing: border-box;
+}
+
+.login-header h2 {
+    margin: 0 0 8px 0;
+    color: #0f172a;
+    font-size: 24px;
+}
+
+.login-header p {
+    color: #64748b;
+    font-size: 14px;
+    margin: 0 0 25px 0;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-align: right;
+}
+
+.input-group label {
+    font-size: 13px;
+    font-weight: bold;
+    color: #334155;
+}
+
+.input-group input {
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-family: Tahoma, sans-serif;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.input-group input:focus {
+    border-color: #7c3aed;
+}
+
+.login-btn {
+    background: #7c3aed;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 10px;
+    transition: background 0.2s;
+}
+
+.login-btn:hover {
+    background: #6d28d9;
+}
+
+.login-footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 13px;
+    color: #64748b;
+}
+
+.login-footer a {
+    color: #7c3aed;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-footer a:hover {
+    text-decoration: underline;
+}
+/* تنسيقات صفحة حجز المواعيد */
+.booking-body {
+    background: #f8fafc;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    font-family: Tahoma, sans-serif;
+    direction: rtl;
+}
+
+.booking-container {
+    background: #ffffff;
+    width: 100%;
+    max-width: 460px;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    box-sizing: border-box;
+}
+
+.booking-header h2 {
+    margin: 0 0 8px 0;
+    color: #0f172a;
+    font-size: 24px;
+}
+
+.booking-header p {
+    color: #64748b;
+    font-size: 14px;
+    margin: 0 0 25px 0;
+}
+
+.booking-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.booking-form select {
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-family: Tahoma, sans-serif;
+    font-size: 14px;
+    outline: none;
+    background: #fff;
+    cursor: pointer;
+}
+
+.booking-form select:focus {
+    border-color: #7c3aed;
+}
+
+.booking-btn {
+    background: #7c3aed;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.2s;
+}
+
+.booking-btn:hover {
+    background: #6d28d9;
+}
+
+.booking-footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 13px;
+}
+
+.booking-footer a {
+    color: #7c3aed;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.booking-footer a:hover {
+    text-decoration: underline;
+}
+/* تنسيقات صفحة الدفع الإلكتروني */
+.checkout-body {
+    background: #f8fafc;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    font-family: Tahoma, sans-serif;
+    direction: rtl;
+}
+
+.checkout-container {
+    background: #ffffff;
+    width: 100%;
+    max-width: 480px;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    box-sizing: border-box;
+}
+
+.checkout-header h2 {
+    margin: 0 0 8px 0;
+    color: #0f172a;
+    font-size: 24px;
+}
+
+.checkout-header p {
+    color: #64748b;
+    font-size: 14px;
+    margin: 0 0 25px 0;
+}
+
+.checkout-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.card-details-row {
+    display: flex;
+    gap: 15px;
+}
+
+.card-details-row .input-group {
+    flex: 1;
+}
+
+.checkout-btn {
+    background: #10b981;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.2s;
+}
+
+.checkout-btn:hover {
+    background: #059669;
+}
+
+.checkout-footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 13px;
+}
+
+.checkout-footer a {
+    color: #7c3aed;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.checkout-footer a:hover {
+    text-decoration: underline;
+}
