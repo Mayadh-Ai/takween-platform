@@ -643,3 +643,19 @@ body {
     border-radius: 8px;
     cursor: pointer;
 }
+.welcome-body {
+  /* مسار الصورة */
+  background-image: url('bg.jpg'); 
+  
+  /* جعل الصورة تغطي الشاشة بالكامل بدون تكرار */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  /* تثبيت الخلفية عند التمرير */
+  background-attachment: fixed;
+  
+  /* ضمان ملء الشاشة بالكامل */
+  min-height: 100vh;
+  margin: 0;
+}
