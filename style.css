@@ -644,15 +644,15 @@ body {
     cursor: pointer;
 }
 .welcome-body {
-  /* مسار الصورة */
-  background-image: url('bg.jpg'); 
+  /*my-bg.jpg*/
+  background-image: url('my-bg.jpg'); 
   
-  /* جعل الصورة تغطي الشاشة بالكامل بدون تكرار */
+  /* تغطية الشاشة بالكامل بدون تكرار أو تشويه */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   
-  /* تثبيت الخلفية عند التمرير */
+  /* تثبيت الخلفية أثناء التمرير */
   background-attachment: fixed;
   
   /* ضمان ملء الشاشة بالكامل */
