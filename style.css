@@ -532,3 +532,114 @@ body {
 .checkout-footer a:hover {
     text-decoration: underline;
 }
+/* TAKWEEN Apple Pay Demo */
+
+.payment-card {
+    background: #fff;
+    padding: 35px;
+    border-radius: 20px;
+    text-align: center;
+    max-width: 420px;
+    margin: 30px auto;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.06);
+}
+
+.payment-icon {
+    font-size: 35px;
+    color: #94758B;
+}
+
+.payment-card h3 {
+    color: #30232E;
+    font-size: 24px;
+}
+
+.payment-description {
+    color: #888;
+}
+
+.amount-box {
+    background: #F8F3F7;
+    padding: 20px;
+    border-radius: 14px;
+    margin: 25px 0;
+}
+
+.amount-box span {
+    color: #777;
+}
+
+.amount-box h2 {
+    color: #94758B;
+    font-size: 30px;
+}
+
+.amount-box small {
+    font-size: 15px;
+}
+
+.apple-pay-mark {
+    background: #000;
+    color: white;
+    border-radius: 10px;
+    padding: 12px;
+    width: 130px;
+    margin: 20px auto;
+    font-size: 22px;
+}
+
+.demo-pay-btn {
+    background: #94758B;
+    color: white;
+    border: none;
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.demo-pay-btn:hover {
+    background: #795C72;
+}
+
+.demo-note {
+    font-size: 12px;
+    color: #999;
+    margin-top: 15px;
+}
+
+.demo-message {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 30px;
+    width: 300px;
+    text-align: center;
+    border-radius: 18px;
+    box-shadow: 0 5px 30px #0003;
+    z-index: 999;
+}
+
+.success-icon {
+    color: #fff;
+    background: #28A66A;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    margin: auto;
+    font-size: 25px;
+}
+
+.demo-message button {
+    background: #94758B;
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 8px;
+    cursor: pointer;
+}
