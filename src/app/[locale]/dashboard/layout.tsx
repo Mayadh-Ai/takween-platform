@@ -2,10 +2,7 @@ import DashboardSidebar from "@/components/dashboard-sidebar";
 import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
 import { authCopy } from "@/lib/auth-copy";
-import {
-  dashboardSections,
-  hasEmployeePermission,
-} from "@/lib/employee-roles";
+
 import { isLocale } from "@/lib/i18n";
 import { isSupabaseConfigured } from "@/lib/supabase/config";
 import { getCurrentEmployeeFromProfile } from "@/lib/supabase/employee-role";
@@ -99,25 +96,7 @@ export default async function DashboardLayout({
     manager: copy.roleManager,
     employee: copy.roleEmployee,
   };
-  const roleLinks = [
-    { label: copy.overview, href: `/${locale}/dashboard`, visible: true },
-    {
-      label: copy.tasks,
-      href: `/${locale}/dashboard/tasks`,
-      visible: hasEmployeePermission(role, dashboardSections.tasks),
-    },
-    {
-      label: copy.team,
-      href: `/${locale}/dashboard/team`,
-      visible: hasEmployeePermission(role, dashboardSections.team),
-    },
-    {
-      label: copy.roleManagement,
-      href: `/${locale}/dashboard/roles`,
-      visible: hasEmployeePermission(role, dashboardSections.roles),
-    },
-  ];
-
+  
   return (
     <div className="employee-shell" dir={isArabic ? "rtl" : "ltr"} lang={locale}>
      <DashboardSidebar locale={locale} role={role} />

@@ -2,6 +2,7 @@
 
 import { useState, type FormEvent } from "react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 import { createSupabaseBrowserClient } from "@/lib/supabase/browser";
 
 type LoginFormProps = {
@@ -26,6 +27,9 @@ export function LoginForm({
   const router = useRouter();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState("");
+
+  const forgotPasswordLabel =
+    locale === "ar" ? "نسيت كلمة المرور؟" : "Forgot password?";
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -77,6 +81,7 @@ export function LoginForm({
           type="email"
         />
       </label>
+
       <label className="auth-field">
         <span>{passwordLabel}</span>
         <input
@@ -87,11 +92,19 @@ export function LoginForm({
           type="password"
         />
       </label>
+
+      <div className="auth-forgot-password">
+        <Link href={`/${locale}/reset-password`}>
+          {forgotPasswordLabel}
+        </Link>
+      </div>
+
       {error ? (
         <p className="auth-message auth-message-error" role="alert">
           {error}
         </p>
       ) : null}
+
       <button
         className="button button-dark auth-submit"
         disabled={unavailable || isSubmitting}
